@@ -21,8 +21,7 @@ if __name__ == "__main__":
     all_todos = data.json()
     user_todos = [todo for todo in all_todos if todo['userId'] == int(argv[1])]
     nr_tasks = len(user_todos)
-    comp_tasks = [comp for comp in user_todos
-                       if comp['completed'] is True]
+    comp_tasks = [comp for comp in user_todos if comp['completed'] is True]
     comp_title = [title['title'] for title in comp_tasks]
 
     print(f"Employee {user_name} is done", end="")
